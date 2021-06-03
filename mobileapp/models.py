@@ -12,6 +12,6 @@ class Product(models.Model):
     brand=models.ForeignKey(Brand,on_delete=models.CASCADE)
     price=models.IntegerField()
     specs=models.CharField(max_length=120)
-
+    image=models.ImageField(upload_to="images")
     def __str__(self):
         return self.mobile_name
